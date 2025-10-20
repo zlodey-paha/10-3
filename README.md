@@ -25,7 +25,27 @@
 
 ### Решение 1
 
+Создание зеркальной копии:
+```
+rsync -avz --delete /home/User/ User@192.168.10.3:/tmp/backup/
+```
+![1.1.1](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.1.1.PNG)
+![1.1.2](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.1.2.PNG)
+![1.1.3](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.1.3.PNG)
 
+Исключение скрытых файлов и директорий
+```
+rsync -avz --delete --exclude='.*' --exclude='.*/' /home/User/ User@192.168.10.3:/tmp/backup/
+```
+![](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.2.1.PNG)
+![](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.2.2.PNG)
+
+С подсчетом хэш-суммы
+```
+rsync -avzc --delete --exclude='.*' --exclude='.*/' /home/User/ User@192.168.10.3:/tmp/backup/
+```
+![](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.3.1.PNG)
+![](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.3.2.PNG)
 
 ------
 
@@ -38,7 +58,10 @@
 
 ### Решение 2
 
-
+![Cronetab -l](https://github.com/zlodey-paha/10-3/blob/main/10-3/1.txt)
+![](https://github.com/zlodey-paha/10-3/blob/main/10-3/2.1.PNG)
+![](https://github.com/zlodey-paha/10-3/blob/main/10-3/2.2.PNG)
+![](https://github.com/zlodey-paha/10-3/blob/main/10-3/2.3.PNG)
 
 ---
 
